@@ -5,7 +5,6 @@ import java.util.Stack;
 import javax.swing.JOptionPane;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class uzd2 {
@@ -14,9 +13,8 @@ public class uzd2 {
         Stack<Integer> mansSteks = new Stack<>();
         Stack<Integer> izlozetie = new Stack<>();
         Random random = new Random();
-        LocalDateTime tagad = LocalDateTime.now();
-        DateTimeFormatter laiks = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         
+
         String[] darbibas = {"Apskatīt skaitļus","Izlozēt skaitļus", "Apturēt"};
 
         long atlikusaislaiks = 0; // laiks pēdējai izlozei
@@ -62,7 +60,7 @@ public class uzd2 {
                             }
                         }
                         JOptionPane.showMessageDialog(null, "Pēdējie Steka skaitļi: "+ mansSteks);
-                        JOptionPane.showMessageDialog(null, "Izlozētie skaitļi "+ izlozetie +"\n"+ tagad.format(laiks));
+                        JOptionPane.showMessageDialog(null, "Izlozētie skaitļi "+ izlozetie);
                         atlikusaislaiks = now; 
                     }
                     break;
